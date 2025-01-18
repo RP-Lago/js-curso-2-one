@@ -43,7 +43,7 @@ function exibirMensagemInicial() {
     exibirTextoNaTela('h1', 'Jogo do Número Secreto');
     if (userName) {
         exibirTextoNaTela('h2', `Olá, ${userName}!`);
-        exibirTextoNaTela('p', 'Escolha um número entre 1 e 10.');
+        exibirTextoNaTela('p', 'Escolha um número entre 1 e 100.');
         document.getElementById('jogoNumeroSecreto').style.display = 'block'; // Show game section
     } else {
         exibirTextoNaTela('h2', 'Por favor, insira seu nome para começar.');
@@ -97,7 +97,8 @@ function verificarChute() {
     
     if (chute === numeroSecreto) {
         let gender = guessGender(userName);
-        exibirTextoNaTela('h1', 'Parabéns!');
+        exibirTextoNaTela('h1', `Parabéns! ${userName}!`);
+        exibirTextoNaTela('h2', `Você acertou em ${tentativas} tentativas!`);
         exibirTextoNaTela('p', genderMessages[gender]);
         document.getElementById('reiniciar').removeAttribute('disabled');
     } else {
