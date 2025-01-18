@@ -107,7 +107,9 @@ button {
 }
 
 button:disabled {
-    background-color: gray;
+    background-color: #5c5c5c;  /* Cinza mais escuro para maior contraste */
+    color: #ffffff;             /* Texto em branco */
+    cursor: not-allowed;
 }
 
 @media screen and (max-width: 1250px) {
