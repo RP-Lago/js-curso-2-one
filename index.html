@@ -32,6 +32,29 @@
                         <button onclick="reiniciarJogo()" id="reiniciar" class="container__botao" disabled>Novo jogo</button>
                         <button onclick="voltar()" class="container__botao">Voltar</button>
                     </div>
+                    
+                    <script>
+                        document.addEventListener('keydown', function(event) {
+                            if (event.key === 'Enter') {
+                                verificarChute();
+                            }
+                        });
+                    
+                        function verificarChute() {
+                            // Sua lógica para verificar o chute
+                            console.log('Chute verificado');
+                        }
+                    
+                        function reiniciarJogo() {
+                            // Sua lógica para reiniciar o jogo
+                            console.log('Jogo reiniciado');
+                        }
+                    
+                        function voltar() {
+                            // Sua lógica para voltar
+                            console.log('Voltar');
+                        }
+                    </script>
                 </div>
             </div>
             <img src="./img/ia.png" alt="Uma pessoa olhando para a esquerda" class="container__imagem-pessoa" />
